@@ -1,5 +1,5 @@
 <!DOCTYPE html>
-<html>
+<html ng-app="blogApp">
 
   <head>
     <meta charset='utf-8' />
@@ -7,12 +7,12 @@
     <meta name="description" content="prewindemon.github.io : Prewindemon的技术博客" />
 
     <link rel="stylesheet" type="text/css" media="screen" href="stylesheets/stylesheet.css">
-
+    <script src="javascripts/angular.js"></script>
+    <script src="controller/indexController.js"></script>
     <title>Pre-World</title>
   </head>
 
   <body>
-
     <!-- HEADER -->
     <div id="header_wrap" class="outer">
         <header class="inner">
@@ -25,32 +25,17 @@
     </div>
 
     <!-- MAIN CONTENT -->
-    <div id="main_content_wrap" class="outer">
+    <div id="main_content_wrap" class="outer" ng-controller="blogListCtrl">
 
-      <section id="main_content" class="inner">
-      <h3>
-      <a name="support-or-contact" class="anchor" href="http://blog.prewindemon.com/javarepl.html">JavaRepl</a></h3>
-      <p>
-        一个写Java程序的地方，纯属娱乐。
-      </p>
+      <section id="main_content" class="inner" ng-repeat="blog in blogs">
+        <h3>
+          <a name="support-or-contact" class="anchor" href="{{blog.url}}">{{blog.name}}</a>
+        </h3>
+        <p class="ng-binding" ng-bind-html="blog.remark | trustHtml">
+        </p>
+        <hr />
       </section>
 
-      <section id="main_content" class="inner">
-      <h3>
-      <a name="support-or-contact" class="anchor" href="http://blog.prewindemon.com/2048.html">2048</a></h3>
-      <p>
-        来玩玩2048吧，分数什么的不是问题
-      </p>
-      </section>
-      <section id="main_content" class="inner">
-      <h3>
-      <a name="support-or-contact" class="anchor" href="http://blog.prewindemon.com">博客地址</a></h3>
-      <p>
-        说出来都是泪。<br/>
-        说不出来的都是苦水。<br/>
-        脸上露出来的，全是微笑。<br/>
-        晒的，都是幸福<br/>
-      </p>
-      </section>
+    </div>
   </body>
 </html>
