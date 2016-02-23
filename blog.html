@@ -1,0 +1,34 @@
+<!DOCTYPE html>
+<html ng-app="blogApp" lang="zh-cn" ng-controller="myBlog">
+
+  <head>
+    <meta charset='utf-8' />
+    <meta http-equiv="X-UA-Compatible" content="chrome=1" />
+    <meta name="description" content="prewindemon.github.io : Prewindemon的技术博客" />
+
+    <link rel="stylesheet" type="text/css" media="screen" href="stylesheets/stylesheet.css">
+    <script src="javascripts/jquery.js"></script>
+    <script src="javascripts/marked.js"></script>
+    <script src="javascripts/angular.js"></script>
+    <script src="controller/blogController.js"></script>
+    <title>{{blog.title}}</title>
+  </head>
+
+  <body>
+    <!-- HEADER -->
+    <div id="header_wrap" class="outer">
+        <header class="inner">
+          <a id="forkme_banner" href="index.html">Blog首页</a>
+
+          <h1 id="project_title">{{blog.title}}</h1>
+          <h2 id="project_tagline">{{blog.remark}}</h2>
+          <h5 id="project_tagline" style="font-size: 18px; text-align: right">-------{{blog.date}}-------</h5>
+        </header>
+    </div>
+
+    <!-- MAIN CONTENT -->
+    <div id="main_content_wrap" class="outer" >
+    <section id="main_content" class="inner" ng-bind-html="blog.content | trustHtml">
+    </section>
+  </body>
+</html>
