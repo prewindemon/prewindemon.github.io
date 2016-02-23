@@ -4,21 +4,29 @@
 		"title": "Linux-SSH连接远程服务",
         "date": {
             "year": "2015",
-            "month: "05",
+            "month": "05",
             "day": "18"
-            },
+        },
 		"remark": "Linux编写Shell脚本自动同步svn并发布maven项目-SSH连接远程服务"
     },
     {
     	"id": "linuxUserSetting",
 		"title": "Linux服务器用户设置",
-        "date": "2015年05月21日",
+        "date": {
+            "year": "2015",
+            "month": "05",
+            "day": "21"
+        },
 		"remark": "Linux编写Shell脚本自动同步svn并发布maven项目-Linux服务器用户设置"
     },
     {
     	"id": "markdownIntroduce",
 		"title": "Markdown基础语法",
-        "date": "2015年04月18日",
+        "date": {
+            "year": "2015",
+            "month": "04",
+            "day": "28"
+        },
 		"remark": "Markdown基础语法学习及事例"
     }
 ]
